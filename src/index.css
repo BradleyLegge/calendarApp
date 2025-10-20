@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+main{
+  position: relative;
+}
+
 /*  */
 
 .current-month-background {
@@ -47,6 +51,44 @@ button {
 
 .calendar-week-days {
   border: 1px solid black;
-  height: 30px;
+  height: 100px;
   border-radius: 5px;
+}
+
+.calendar-week-days:hover{
+  cursor: pointer;
+}
+
+/* Details component */
+
+.details-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 128, 0, .5);
+  width: 100%;
+  min-height: 100%;
+}
+
+.hello-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  background: blue;
+  border: 1px solid red;
+  width: 60%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
 }

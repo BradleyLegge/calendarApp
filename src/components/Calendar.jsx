@@ -56,7 +56,7 @@ const Calendar = () => {
           return (
             <div
               key={day.toISOString()}
-              onClick={handleDay}
+              onClick={() => setOpenDetails(!openDetails)}
               className={`calendar-week-days ${
                 isToday
                   ? "today-background"
@@ -70,7 +70,9 @@ const Calendar = () => {
           );
         })}
       </div>
-      {openDetails && <Details />}
+      {openDetails && (
+        <Details openDetails={openDetails} setOpenDetails={setOpenDetails} />
+      )}
     </div>
   );
 };

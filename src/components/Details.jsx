@@ -1,9 +1,17 @@
 import React from "react";
 
-const Details = () => {
+const Details = ({ openDetails, setOpenDetails }) => {
   return (
-    <div>
-      <h1>Hello from details.</h1>
+    <div className="details-container">
+      <div className="hello-container">
+        <button
+          onClick={() => setOpenDetails(!openDetails)}
+          className="close-btn"
+        >
+          X
+        </button>
+        <h1 className="hello">Hello from details.</h1>
+      </div>
     </div>
   );
 };
