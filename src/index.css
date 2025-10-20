@@ -56,12 +56,14 @@ button {
 }
 
 .calendar-week-days:hover{
+  border: 2px solid black;
+  background: gray;
   cursor: pointer;
 }
 
 /* Details component */
 
-.details-container{
+.details-container, .schedule-container{
   position: absolute;
   top: 0;
   left: 0;
@@ -70,12 +72,12 @@ button {
   min-height: 100%;
 }
 
-.hello-container{
+.hello-container, .hello-sch-container{
   position: absolute;
   top: 50%;
   left: 50%;
   display: flex;
-  background: blue;
+  background: beige;
   border: 1px solid red;
   width: 60%;
   height: 50%;
@@ -91,4 +93,11 @@ button {
   top: 10px;
   width: 40px;
   height: 40px;
+}
+
+/* Schedule component */
+
+.hello-sch-container{
+  display: flex;
+  flex-direction: column;
 }

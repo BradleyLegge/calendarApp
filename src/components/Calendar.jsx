@@ -29,7 +29,6 @@ const Calendar = () => {
   const handlePrevious = () => setCurrentMonth(subMonths(currentMonth, 1));
   const handleNext = () => setCurrentMonth(addMonths(currentMonth, 1));
   // const handleDay = (day) => setCurrentDate(day);
-  const handleDay = () => setOpenDetails(true);
 
   return (
     <div className="calendar-container">

@@ -1,6 +1,9 @@
 import React from "react";
+import { useState } from "react";
+import Schedule from "./Schedule";
 
 const Details = ({ openDetails, setOpenDetails }) => {
+  const [openSchedule, setOpenSchedule] = useState(false);
   return (
     <div className="details-container">
       <div className="hello-container">
@@ -10,8 +13,16 @@ const Details = ({ openDetails, setOpenDetails }) => {
         >
           X
         </button>
-        <h1 className="hello">Hello from details.</h1>
+        <button onClick={() => setOpenSchedule(!openSchedule)}>
+          Add Schedule
+        </button>
       </div>
+      {openSchedule && (
+        <Schedule
+          openSchedule={openSchedule}
+          setOpenSchedule={setOpenSchedule}
+        />
+      )}
     </div>
   );
 };
