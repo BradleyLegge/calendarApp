@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-main{
+main {
   position: relative;
 }
 
@@ -55,7 +55,7 @@ button {
   border-radius: 5px;
 }
 
-.calendar-week-days:hover{
+.calendar-week-days:hover {
   border: 2px solid black;
   background: gray;
   cursor: pointer;
@@ -63,16 +63,18 @@ button {
 
 /* Details component */
 
-.details-container, .schedule-container{
+.details-container,
+.schedule-container {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 128, 0, .5);
+  background: rgba(0, 128, 0, 0.5);
   width: 100%;
   min-height: 100%;
 }
 
-.hello-container, .hello-sch-container{
+.hello-container,
+.hello-sch-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -84,7 +86,7 @@ button {
   transform: translate(-50%, -50%);
 }
 
-.close-btn{
+.close-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,7 +99,11 @@ button {
 
 /* Schedule component */
 
-.hello-sch-container{
+.hello-sch-container {
   display: flex;
   flex-direction: column;
+}
+
+.daily-schedule {
+  display: flex;
 }

@@ -1,9 +1,10 @@
 import React from "react";
-import { eachDayOfInterval, endOfWeek, getWeek, startOfWeek } from "date-fns";
+import { eachDayOfInterval, endOfWeek, format, startOfWeek } from "date-fns";
 
 const Schedule = ({ openSchedule, setOpenSchedule }) => {
   const weekStart = startOfWeek(new Date());
   const weekEnd = endOfWeek(new Date());
+  console.log(weekStart);
 
   const weekSchedule = eachDayOfInterval({ start: weekStart, end: weekEnd });
   return (
@@ -15,12 +16,15 @@ const Schedule = ({ openSchedule, setOpenSchedule }) => {
         >
           X
         </button>
-        {weekSchedule.map((days) => (
-          <div key={days.toISOString()} className="daily-schedule">
-            <p>{days.getDate()}</p>
-            <input type="text" />
-          </div>
-        ))}
+        {weekSchedule.map((day) => {
+          const dayName = format(day, "eee");
+          return (
+            <div key={day.toISOString()} className="daily-schedule">
+              <p>{`${dayName} ${day.getDate()}`}</p>
+              <input type="text" /> to <input type="text" />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
